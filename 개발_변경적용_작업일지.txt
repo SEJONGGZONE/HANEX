@@ -1,0 +1,7 @@
+
+
+// 다크테마 만들기..
+store.toggleTheme('dark')
+
+// 상단고정, 하단 펼침 메뉴 만들기
+store.toggleMenu('horizontal')"
