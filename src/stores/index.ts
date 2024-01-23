@@ -116,6 +116,12 @@ export const useAppStore = defineStore('app', {
                 this.isShowMainLoader = false;
             }, 500);
         },
+        getMenuList() {
+            return [
+                { id: '01', menuName: '배송순서편집', link: '/editList',},
+                { id: '02', menuName: '개발용페이지', link: '/work_page',},
+            ];
+        },
     },
     getters: {},
 });
