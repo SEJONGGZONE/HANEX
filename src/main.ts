@@ -35,4 +35,8 @@ app.use(i18n);
 import Popper from 'vue3-popper';
 app.component('Popper', Popper);
 
+
+import Vue3Geolocation from 'vue3-geolocation';
+app.use(Vue3Geolocation);
+
 app.mount('#app');
