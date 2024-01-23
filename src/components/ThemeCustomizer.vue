@@ -40,6 +40,7 @@
                 class="relative h-full overflow-x-hidden ltr:pr-3 rtl:pl-3 ltr:-mr-3 rtl:-ml-3"
             >
                 <div>
+                    <!--색상테마 설정-->
                     <div class="text-center relative pb-5">
                         <a
                             href="javascript:;"
@@ -62,13 +63,14 @@
                                 <line x1="6" y1="6" x2="18" y2="18"></line>
                             </svg>
                         </a>
-                        <h4 class="mb-1 dark:text-white">TEMPLATE CUSTOMIZER</h4>
-                        <p class="text-white-dark">Set preferences that will be cookied for your live preview demonstration.</p>
+                        <h4 class="mb-1 dark:text-white">사용자 설정</h4>
+                        <p class="text-white-dark">설정후 재접속시에도 유지됩니다.</p>
                     </div>
                     <div class="border border-dashed border-[#e0e6ed] dark:border-[#1b2e4b] rounded-md mb-3 p-3">
-                        <h5 class="mb-1 text-base dark:text-white leading-none">Color Scheme</h5>
-                        <p class="text-white-dark text-xs">Overall light or dark presentation.</p>
+                        <h5 class="mb-1 text-base dark:text-white leading-none">색상설정</h5>
+                        <p class="text-white-dark text-xs">전체적으로 주야간 모드를 설정하실 수 있습니다.</p>
                         <div class="grid grid-cols-3 gap-2 mt-3">
+                            <!--라이트모드-->
                             <button
                                 type="button"
                                 class="btn"
@@ -119,6 +121,7 @@
                                 </svg>
                                 Light
                             </button>
+                            <!--다크모드-->
                             <button
                                 type="button"
                                 class="btn"
@@ -140,6 +143,7 @@
                                 </svg>
                                 Dark
                             </button>
+                            <!--시스템모드-->
                             <button
                                 type="button"
                                 class="btn"
@@ -166,10 +170,10 @@
                             </button>
                         </div>
                     </div>
-
+                    <!-- 메뉴위치조절 -->
                     <div class="border border-dashed border-[#e0e6ed] dark:border-[#1b2e4b] rounded-md mb-3 p-3">
-                        <h5 class="mb-1 text-base dark:text-white leading-none">Navigation Position</h5>
-                        <p class="text-white-dark text-xs">Select the primary navigation paradigm for your app.</p>
+                        <h5 class="mb-1 text-base dark:text-white leading-none">메뉴표시 설정</h5>
+                        <p class="text-white-dark text-xs">메뉴표시 위치(방식)을 설정합니다.</p>
                         <div class="grid grid-cols-3 gap-2 mt-3">
                             <button
                                 type="button"
@@ -177,7 +181,7 @@
                                 :class="[store.menu === 'horizontal' ? 'btn-primary' : 'btn-outline-primary']"
                                 @click="store.toggleMenu('horizontal')"
                             >
-                                Horizontal
+                                상단<br/>Horizontal
                             </button>
                             <button
                                 type="button"
@@ -185,7 +189,7 @@
                                 :class="[store.menu === 'vertical' ? 'btn-primary' : 'btn-outline-primary']"
                                 @click="store.toggleMenu('vertical')"
                             >
-                                Vertical
+                                세로<br/>Vertical
                             </button>
                             <button
                                 type="button"
@@ -193,7 +197,7 @@
                                 :class="[store.menu === 'collapsible-vertical' ? 'btn-primary' : 'btn-outline-primary']"
                                 @click="store.toggleMenu('collapsible-vertical')"
                             >
-                                Collapsible
+                                아이콘<br/>Collapsible
                             </button>
                         </div>
                         <div class="mt-5 text-primary">
@@ -203,91 +207,11 @@
                             </label>
                         </div>
                     </div>
-                    <div class="border border-dashed border-[#e0e6ed] dark:border-[#1b2e4b] rounded-md mb-3 p-3">
-                        <h5 class="mb-1 text-base dark:text-white leading-none">Layout Style</h5>
-                        <p class="text-white-dark text-xs">Select the primary layout style for your app.</p>
-                        <div class="flex gap-2 mt-3">
-                            <button
-                                type="button"
-                                class="btn flex-auto"
-                                :class="[store.layout === 'boxed-layout' ? 'btn-primary' : 'btn-outline-primary']"
-                                @click="store.toggleLayout('boxed-layout')"
-                            >
-                                Box
-                            </button>
-                            <button
-                                type="button"
-                                class="btn flex-auto"
-                                :class="[store.layout === 'full' ? 'btn-primary' : 'btn-outline-primary']"
-                                @click="store.toggleLayout('full')"
-                            >
-                                Full
-                            </button>
-                        </div>
-                    </div>
-                    <div class="border border-dashed border-[#e0e6ed] dark:border-[#1b2e4b] rounded-md mb-3 p-3">
-                        <h5 class="mb-1 text-base dark:text-white leading-none">Direction</h5>
-                        <p class="text-white-dark text-xs">Select the direction for your app.</p>
-                        <div class="flex gap-2 mt-3">
-                            <button
-                                type="button"
-                                class="btn flex-auto"
-                                :class="[store.rtlClass === 'ltr' ? 'btn-primary' : 'btn-outline-primary']"
-                                @click="store.toggleRTL('ltr')"
-                            >
-                                LTR
-                            </button>
-                            <button
-                                type="button"
-                                class="btn flex-auto"
-                                :class="[store.rtlClass === 'rtl' ? 'btn-primary' : 'btn-outline-primary']"
-                                @click="store.toggleRTL('rtl')"
-                            >
-                                RTL
-                            </button>
-                        </div>
-                    </div>
 
+                    <!-- 화면애니메이션 선택 -->
                     <div class="border border-dashed border-[#e0e6ed] dark:border-[#1b2e4b] rounded-md mb-3 p-3">
-                        <h5 class="mb-1 text-base dark:text-white leading-none">Navbar Type</h5>
-                        <p class="text-white-dark text-xs">Sticky or Floating.</p>
-                        <div class="mt-3 flex items-center gap-3 text-primary">
-                            <label class="inline-flex mb-0">
-                                <input
-                                    :checked="store.navbar === 'navbar-sticky'"
-                                    type="radio"
-                                    value="navbar-sticky"
-                                    class="form-radio"
-                                    @change="store.toggleNavbar('navbar-sticky')"
-                                />
-                                <span>Sticky</span>
-                            </label>
-                            <label class="inline-flex mb-0">
-                                <input
-                                    :checked="store.navbar === 'navbar-floating'"
-                                    type="radio"
-                                    value="navbar-floating"
-                                    class="form-radio"
-                                    @change="store.toggleNavbar('navbar-floating')"
-                                />
-                                <span>Floating</span>
-                            </label>
-                            <label class="inline-flex mb-0">
-                                <input
-                                    :checked="store.navbar === 'navbar-static'"
-                                    type="radio"
-                                    value="navbar-static"
-                                    class="form-radio"
-                                    @change="store.toggleNavbar('navbar-static')"
-                                />
-                                <span>Static</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="border border-dashed border-[#e0e6ed] dark:border-[#1b2e4b] rounded-md mb-3 p-3">
-                        <h5 class="mb-1 text-base dark:text-white leading-none">Router Transition</h5>
-                        <p class="text-white-dark text-xs">Animation of main content.</p>
+                        <h5 class="mb-1 text-base dark:text-white leading-none">메뉴진입 효과</h5>
+                        <p class="text-white-dark text-xs">메뉴선택후 화면이 나오는 시점에 효과를 설정합니다.</p>
                         <div class="mt-3">
                             <select v-model="store.animation" class="form-select border-primary text-primary" @change="store.toggleAnimation()">
                                 <option value="">None</option>

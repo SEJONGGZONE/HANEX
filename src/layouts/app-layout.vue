@@ -76,9 +76,13 @@
 </template>
 <script setup lang="ts">
     import { ref, onMounted } from 'vue';
+    // 사이드 메뉴
     import Sidebar from '@/components/layout/Sidebar_hanex.vue';
+    // 헤더
     import Header from '@/components/layout/Header_hanex.vue';
+    // 풋터
     import Footer from '@/components/layout/Footer.vue';
+    // 설정
     import Setting from '@/components/ThemeCustomizer.vue';
     import appSetting from '@/app-setting';
 

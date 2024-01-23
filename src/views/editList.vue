@@ -58,7 +58,7 @@
     import IconStar from '@/components/icon/icon-star.vue';
     import IconHeart from '@/components/icon/icon-heart.vue';
 
-    useMeta({ title: 'Drag & Drop' });
+    useMeta({ title: '배송순서편집' });
 
     const items = ref([
         { id: '01', text: '일산센터', name: 'BOX 16 / PLT 0',},
