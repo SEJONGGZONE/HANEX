@@ -180,8 +180,9 @@
     const items = ref([
         { id: '01', menuName: '배송순서편집', link: '/editList',},
         { id: '02', menuName: '이미지조회', link: '/',},
-        { id: '01', menuName: 'GPS보고', link: '/',},
-        { id: '01', menuName: '전자서명', link: '/',},
-        { id: '02', menuName: '카메라촬영', link: '/',},
+        { id: '03', menuName: 'GPS보고', link: '/',},
+        { id: '04', menuName: '전자서명', link: '/',},
+        { id: '05', menuName: '카메라촬영', link: '/',},
+        { id: '06', menuName: '참고페이지', link: '/work_page',},
     ]);
 </script>
