@@ -48,7 +48,7 @@
                             >
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                             </svg>
-                            <span>{{ $t('Order - 업무보고') }}</span>
+                            <span>Order - 업무보고</span>
                         </h2>
 
                         <li class="nav-item">
@@ -57,9 +57,7 @@
                                     <router-link to="/menu01" class="group" @click="toggleMobileMenu" replace>
                                         <div class="flex items-center">
                                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"><path d="M2 5.5L3.21429 7L7.5 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path opacity="0.5" d="M2 12.5L3.21429 14L7.5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 19.5L3.21429 21L7.5 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M22 19L12 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path opacity="0.5" d="M22 12L12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path d="M22 5L12 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
-                                            <span class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{{
-                                                $t('배차조회')
-                                            }}</span>
+                                            <span class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">배차조회</span>
                                         </div>
                                     </router-link>
                                 </li>
@@ -67,9 +65,7 @@
                                     <router-link to="/menu02" class="group" @click="toggleMobileMenu" replace>
                                         <div class="flex items-center">
                                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"><path d="M2 12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10 4H14C17.7712 4 19.6569 4 20.8284 5.17157C22 6.34315 22 8.22876 22 12C22 15.7712 22 17.6569 20.8284 18.8284C19.6569 20 17.7712 20 14 20H10C6.22876 20 4.34315 20 3.17157 18.8284C2 17.6569 2 15.7712 2 12Z" stroke="currentColor" stroke-width="1.5"></path><path opacity="0.5" d="M10 16H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path opacity="0.5" d="M14 16H12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path opacity="0.5" d="M2 10L22 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
-                                            <span class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{{
-                                                $t('주유등록')
-                                            }}</span>
+                                            <span class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">주유등록</span>
                                         </div>
                                     </router-link>
                                 </li>
@@ -89,7 +85,7 @@
                             >
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                             </svg>
-                            <span>{{ $t('Notice - 알림/공지') }}</span>
+                            <span>'Notice - 알림/공지</span>
                         </h2>
                         <li class="nav-item">
                             <ul>
@@ -97,9 +93,7 @@
                                     <router-link to="/menu03" class="group" @click="toggleMobileMenu" replace>
                                         <div class="flex items-center">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"><path d="M13.926 9.70541C13.5474 9.33386 13.5474 8.74151 13.5474 7.55682V7.24712C13.5474 3.96249 13.5474 2.32018 12.6241 2.03721C11.7007 1.75425 10.711 3.09327 8.73167 5.77133L5.66953 9.91436C4.3848 11.6526 3.74244 12.5217 4.09639 13.205C4.10225 13.2164 4.10829 13.2276 4.1145 13.2387C4.48945 13.9117 5.59888 13.9117 7.81775 13.9117C9.05079 13.9117 9.6673 13.9117 10.054 14.2754" stroke="currentColor" stroke-width="1.5"></path><path opacity="0.5" d="M13.9259 9.70557L13.9459 9.72481C14.3326 10.0885 14.9492 10.0885 16.1822 10.0885C18.4011 10.0885 19.5105 10.0885 19.8854 10.7615C19.8917 10.7726 19.8977 10.7838 19.9036 10.7951C20.2575 11.4785 19.6151 12.3476 18.3304 14.0858L15.2682 18.2288C13.2888 20.9069 12.2991 22.2459 11.3758 21.9629C10.4524 21.68 10.4524 20.0376 10.4525 16.753L10.4525 16.4434C10.4525 15.2587 10.4525 14.6663 10.074 14.2948L10.054 14.2755" stroke="currentColor" stroke-width="1.5"></path></svg>
-                                            <span class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{{
-                                                $t('이상보고')
-                                            }}</span>
+                                            <span class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">이상보고</span>
                                         </div>
                                     </router-link>
                                 </li>
@@ -119,7 +113,7 @@
                             >
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                             </svg>
-                            <span>{{ $t('Develop - 개발참고') }}</span>
+                            <span>Develop - 개발참고</span>
                         </h2>
                         <li class="nav-item">
                             <ul>
@@ -176,5 +170,6 @@
             store.toggleSidebar();
         }
     };
+    // 메뉴리스트 가져오기..
     const items = store.getMenuList();
 </script>

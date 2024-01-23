@@ -18,7 +18,9 @@ const routes: RouteRecordRaw[] = [
     { path: '/menu03', name: 'menu03', component: () => import('../views/menu_03.vue') },
     { path: '/menu04', name: 'menu04', component: () => import('../views/menu_04.vue') },
     { path: '/editList', name: 'editList', component: () => import('../views/editList.vue') },
-    { path: '/work_page', name: 'work_page', component: () => import('../views/work_page.vue') },
+    { path: '/workPage', name: 'workPage', component: () => import('../views/workPage.vue') },
+    { path: '/imageView', name: 'imageView', component: () => import('../views/imageView.vue') },
+    { path: '/gpsReport', name: 'gpsReport', component: () => import('../views/gpsReport.vue') },
 ];
 
 const router = createRouter({

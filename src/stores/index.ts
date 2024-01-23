@@ -116,10 +116,20 @@ export const useAppStore = defineStore('app', {
                 this.isShowMainLoader = false;
             }, 500);
         },
+        getPageList() {
+            return [
+                { path: '/menu01', name: 'menu01', component: () => import('../views/menu_01.vue') },
+                { path: '/menu02', name: 'menu02', component: () => import('../views/menu_02.vue') },
+                { path: '/menu03', name: 'menu03', component: () => import('../views/menu_03.vue') },
+                { path: '/menu04', name: 'menu04', component: () => import('../views/menu_04.vue') },
+                { path: '/editList', name: 'editList', component: () => import('../views/editList.vue') },
+                { path: '/workPage', name: 'workPage', component: () => import('../views/workPage.vue') },
+            ];
+        },
         getMenuList() {
             return [
-                { id: '01', menuName: '배송순서편집', link: '/editList',},
-                { id: '02', menuName: '개발용페이지', link: '/work_page',},
+                // { id: '01', menuName: '배송순서편집', link: '/editList',},
+                { id: '02', menuName: '개발용페이지', link: '/workPage',},
             ];
         },
     },
