@@ -22,25 +22,25 @@
 import { defineComponent } from 'vue'
 import Camera from "simple-vue-camera";
 
-export default defineComponent({
-    setup() {
-        // Get a reference of the component
-        const camera = this.refs<InstanceType<typeof Camera>>();
+// export default defineComponent({
+//     setup() {
+//         // Get a reference of the component
+//         const camera = this.refs<InstanceType<typeof Camera>>();
 
-        // Use camera reference to call functions
-        const snapshot = async () => {
-            const blob = await camera.value?.snapshot();
+//         // Use camera reference to call functions
+//         const snapshot = async () => {
+//             const blob = await camera.value?.snapshot();
 
-            // To show the screenshot with an image tag, create a url
-            const url = URL.createObjectURL(blob);
-        }
+//             // To show the screenshot with an image tag, create a url
+//             const url = URL.createObjectURL(blob);
+//         }
 
-        return {
-            camera,
-            snapshot
-        }
-    }
-});
+//         return {
+//             camera,
+//             snapshot
+//         }
+//     }
+// });
 
 </script>
 
