@@ -12,7 +12,7 @@ import Menu04 from '../views/menu_04.vue';
 
 const routes: RouteRecordRaw[] = [
     // dashboard
-    { path: '/', name: 'home', component: HomeView },
+    { path: '/main', name: 'home', component: HomeView },
     { path: '/menu01', name: 'menu01', component: () => import('../views/menu_01.vue') },
     { path: '/menu02', name: 'menu02', component: () => import('../views/menu_02.vue') },
     { path: '/menu03', name: 'menu03', component: () => import('../views/menu_03.vue') },
@@ -23,6 +23,13 @@ const routes: RouteRecordRaw[] = [
     { path: '/gpsReport', name: 'gpsReport', component: () => import('../views/gpsReport.vue') },
     { path: '/signSample', name: 'signSample', component: () => import('../views/signSample.vue') },
     { path: '/cameraSample', name: 'cameraSample', component: () => import('../views/cameraSample.vue') },
+    // 로그인
+    {
+        path: '/',
+        name: 'boxed-signin',
+        component: () => import('../views/auth/boxed-signin.vue'),
+        meta: { layout: 'auth' },
+    },
 ];
 
 const router = createRouter({

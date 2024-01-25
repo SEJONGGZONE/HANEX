@@ -43,4 +43,7 @@ import VueCameraLib from 'vue-camera-lib'
 app.use(VueCameraLib)
 
 
+import { VueSignaturePad } from "vue-signature-pad";
+app.component("VueSignaturePad", VueSignaturePad);
+
 app.mount('#app');

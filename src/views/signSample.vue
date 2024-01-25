@@ -9,112 +9,86 @@
             </li>
         </ul>
     </div>
-    <div>
-        <canvas ref="signatureCanvas" v-on:mousedown="onBegin" v-on:mouseup="onEnd"></canvas>
-        <button type="button" class="btn btn-primary w-full my-2" @click="clearCanvas">지우기</button>
+    <div class="container">
+      <div class="container">
+        <VueSignaturePad
+          id="signature"
+          width="100%"
+          height="500px"
+          ref="signaturePad"
+          :options="options"
+        />
+      </div>
+      <div class="buttons">
+        <button @click="undo">Undo</button>
+        <button @click="save">Save</button>
+        <button @click="change">Change Color</button>
+        <button @click="resume">Resume Color</button>
+      </div>
     </div>
 </template>
 
 <script>
-
-// 참고URL : https://github.com/szimek/signature_pad
-/**
-
------------------- API ------------------
-
-const canvas = document.querySelector("canvas");
-
-const signaturePad = new SignaturePad(canvas);
-
-// Returns signature image as data URL (see https://mdn.io/todataurl for the list of possible parameters)
-signaturePad.toDataURL(); // save image as PNG
-signaturePad.toDataURL("image/jpeg"); // save image as JPEG
-signaturePad.toDataURL("image/jpeg", 0.5); // save image as JPEG with 0.5 image quality
-signaturePad.toDataURL("image/svg+xml"); // save image as SVG data url
-
-// Return svg string without converting to base64
-signaturePad.toSVG(); // "<svg...</svg>"
-signaturePad.toSVG({includeBackgroundColor: true}); // add background color to svg output
-
-// Draws signature image from data URL (mostly uses https://mdn.io/drawImage under-the-hood)
-// NOTE: This method does not populate internal data structure that represents drawn signature. Thus, after using #fromDataURL, #toData won't work properly.
-signaturePad.fromDataURL("data:image/png;base64,iVBORw0K...");
-
-// Draws signature image from data URL and alters it with the given options
-signaturePad.fromDataURL("data:image/png;base64,iVBORw0K...", { ratio: 1, width: 400, height: 200, xOffset: 100, yOffset: 50 });
-
-// Returns signature image as an array of point groups
-const data = signaturePad.toData();
-
-// Draws signature image from an array of point groups
-signaturePad.fromData(data);
-
-// Draws signature image from an array of point groups, without clearing your existing image (clear defaults to true if not provided)
-signaturePad.fromData(data, { clear: false });
-
-// Clears the canvas
-signaturePad.clear();
-
-// Returns true if canvas is empty, otherwise returns false
-signaturePad.isEmpty();
-
-// Unbinds all event handlers
-signaturePad.off();
-
-// Rebinds all event handlers
-signaturePad.on();
- * 
- */
-import SignaturePad from 'signature_pad';
-
 export default {
-  data() {
-    return {
-      signaturePad: null
-    };
-  },
-  mounted() {
-    const canvas = this.$refs.signatureCanvas;
-    this.signaturePad = new SignaturePad(canvas, {
-        //dotSize : 0.5,
-        //minWidth : 0.1,
-        //maxWidth : 1.0,
-        penColor : '#5c60d1',
-        //velocityFilterWeight : 0.1
-    });
-    setTimeout(() => {
-        // console.log('Loaded...');
-    }, 500);
-
-    const recaptchaScript = document.createElement("script");
-    recaptchaScript.setAttribute(
-      "src",
-      "https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"
-    );
-    document.head.appendChild(recaptchaScript);
-  },
+  name: "signSample",
+  data: () => ({
+    options: {
+      penColor: "#c0f",
+    },
+  }),
   methods: {
-    clearCanvas() {
-        // 서명지우기
-        this.signaturePad.clear();
+    undo() {
+      this.$refs.signaturePad.undoSignature();
     },
-    onBegin() {
-        // 서명시작
-        this.signaturePad.onBegin();
-    },
-    onEnd() {
-        // 서명종료
-        this.signaturePad.onEnd();
-    }
-   }
-};
+    save() {
+      const { isEmpty, data } = this.$refs.signaturePad.saveSignature();
 
+      alert("Open DevTools see the save data.");
+      console.log(isEmpty);
+      console.log(data);
+    },
+    change() {
+      this.options = {
+        penColor: "#00f",
+      };
+    },
+    resume() {
+      this.options = {
+        penColor: "#c0f",
+      };
+    },
+  },
+};
 </script>
 
-<style scoped>
-canvas {
-  border: 0.1rem solid #5c60d1;
-  width: 100%;
-  height: 15rem;
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+#signature {
+  border: double 3px transparent;
+  border-radius: 5px;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, #4bc5e8, #9f6274);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.container {
+  width: "100%";
+  padding: 8px 16px;
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 8px;
 }
 </style>
