@@ -10,33 +10,33 @@
         </ul>
     </div>
     <div class="py-1">
-        <button type="button" class="btn btn-primary w-full" @click="actionButton('/editList', '_self')">배송순서 편집</button>
+        <button type="button" class="btn py-3 font-normal text-lg btn-primary w-full" @click="actionButton('/editList', '_self')">배송순서 편집</button>
     </div>
     <div class="py-1">
-        <button type="button" class="btn btn-success w-full" @click="actionButton('/imageView', '_self')">이미지조회</button>
+        <button type="button" class="btn py-3 font-normal text-lg btn-success w-full" @click="actionButton('/imageView', '_self')">이미지조회</button>
     </div>
     <div class="py-1">
-        <button type="button" class="btn btn-warning w-full" @click="actionButton('/gpsReport', '_self')">GPS보고</button>
+        <button type="button" class="btn py-3 font-normal text-lg btn-warning w-full" @click="actionButton('/gpsReport', '_self')">GPS보고</button>
     </div>
     <div class="py-1">
-        <button type="button" class="btn btn-secondary w-full" @click="actionButton('/signSample', '_self')">전자서명</button>
+        <button type="button" class="btn py-3 font-normal text-lg btn-secondary w-full" @click="actionButton('/signSample', '_self')">전자서명</button>
     </div>
     <div class="py-1">
-        <button type="button" class="btn btn-info w-full" @click="actionButton('/cameraSample', '_self')">카메라촬영</button>
+        <button type="button" class="btn py-3 font-normal text-lg btn-info w-full" @click="actionButton('/cameraSample', '_self')">카메라촬영</button>
     </div>
     <br/><br/>
     
     <div class="py-1">
-        <button type="button" class="btn btn-dark w-full" @click="actionButton('https://62fe53df410812000989322e--statuesque-madeleine-efb457.netlify.app/', '_blank')">(팝업) 카메라 참고사이트</button>
+        <button type="button" class="btn py-3 font-normal text-lg btn-dark w-full" @click="actionButton('https://62fe53df410812000989322e--statuesque-madeleine-efb457.netlify.app/', '_blank')">(팝업) 카메라 참고사이트</button>
     </div>
     <div class="py-1">
-        <button type="button" class="btn btn-dark w-full" @click="actionButton('https://github.com/szimek/signature_pad', '_blank')">(팝업) 서명 참고사이트</button>
+        <button type="button" class="btn py-3 font-normal text-lg btn-dark w-full" @click="actionButton('https://github.com/szimek/signature_pad', '_blank')">(팝업) 서명 참고사이트</button>
     </div>
     <div class="py-1">
-        <button type="button" class="btn btn-dark w-full" @click="actionButton('https://mirari.github.io/vue3-viewer', '_blank')">(팝업) 이미지뷰어 참고사이트</button>
+        <button type="button" class="btn py-3 font-normal text-lg btn-dark w-full" @click="actionButton('https://mirari.github.io/vue3-viewer', '_blank')">(팝업) 이미지뷰어 참고사이트</button>
     </div>
     <div class="py-1">
-        <button type="button" class="btn btn-dark w-full" @click="actionButton('http://ai.gzonesoft.com:9089', '_blank')">(팝업) 샘플테마 참고사이트</button>
+        <button type="button" class="btn py-3 font-normal text-lg btn-dark w-full" @click="actionButton('http://ai.gzonesoft.com:9089', '_blank')">(팝업) 샘플테마 참고사이트</button>
     </div>
     
 </template>
