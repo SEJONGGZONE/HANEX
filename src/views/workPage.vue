@@ -30,7 +30,7 @@
         <button type="button" class="btn py-3 font-normal text-lg btn-dark w-full" @click="actionButton('https://62fe53df410812000989322e--statuesque-madeleine-efb457.netlify.app/', '_blank')">(팝업) 카메라 참고사이트</button>
     </div>
     <div class="py-1">
-        <button type="button" class="btn py-3 font-normal text-lg btn-dark w-full" @click="actionButton('https://github.com/szimek/signature_pad', '_blank')">(팝업) 서명 참고사이트</button>
+        <button type="button" class="btn py-3 font-normal text-lg btn-dark w-full" @click="actionButton('https://www.npmjs.com/package/vue-signature-pad', '_blank')">(팝업) 서명 참고사이트</button>
     </div>
     <div class="py-1">
         <button type="button" class="btn py-3 font-normal text-lg btn-dark w-full" @click="actionButton('https://mirari.github.io/vue3-viewer', '_blank')">(팝업) 이미지뷰어 참고사이트</button>

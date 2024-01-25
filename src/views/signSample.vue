@@ -20,10 +20,12 @@
         />
       </div>
       <div class="buttons">
-        <button @click="undo">Undo</button>
-        <button @click="save">Save</button>
-        <button @click="change">Change Color</button>
-        <button @click="resume">Resume Color</button>
+        <div class="py-1">
+            <button type="button" class="btn py-3 font-normal text-lg btn-dark" @click="clearSign">지우기</button>
+        </div>
+        <div class="py-1">
+            <button type="button" class="btn py-3 font-normal text-lg btn-dark" @click="save">서명완료</button>
+        </div>
       </div>
     </div>
 </template>
@@ -33,28 +35,31 @@ export default {
   name: "signSample",
   data: () => ({
     options: {
-      penColor: "#c0f",
+      penColor: "#1b1a58",
     },
   }),
   methods: {
+    clearSign() {
+      this.$refs.signaturePad.clearSignature();
+    },
     undo() {
       this.$refs.signaturePad.undoSignature();
     },
     save() {
       const { isEmpty, data } = this.$refs.signaturePad.saveSignature();
 
-      alert("Open DevTools see the save data.");
+      alert("저장기능 대기. 저장데이타는 콘솔창 확인.");
       console.log(isEmpty);
       console.log(data);
     },
     change() {
       this.options = {
-        penColor: "#00f",
+        penColor: "#00",
       };
     },
     resume() {
       this.options = {
-        penColor: "#c0f",
+        penColor: "#1b1a58",
       };
     },
   },
@@ -62,15 +67,7 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
+/** 서명영역 */
 #signature {
   border: double 3px transparent;
   border-radius: 5px;
@@ -82,7 +79,6 @@ export default {
 
 .container {
   width: "100%";
-  padding: 8px 16px;
 }
 
 .buttons {
@@ -90,5 +86,9 @@ export default {
   gap: 8px;
   justify-content: center;
   margin-top: 8px;
+}
+
+.sample {
+  color:#1b1a58;
 }
 </style>

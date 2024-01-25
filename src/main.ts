@@ -43,7 +43,7 @@ import VueCameraLib from 'vue-camera-lib'
 app.use(VueCameraLib)
 
 
-import { VueSignaturePad } from "vue-signature-pad";
+import { VueSignaturePad } from "vue-signature-pad"; // 참조사이트 : https://www.npmjs.com/package/vue-signature-pad
 app.component("VueSignaturePad", VueSignaturePad);
 
 app.mount('#app');
