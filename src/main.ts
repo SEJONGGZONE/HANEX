@@ -39,4 +39,8 @@ app.component('Popper', Popper);
 import Vue3Geolocation from 'vue3-geolocation';
 app.use(Vue3Geolocation);
 
+import VueCameraLib from 'vue-camera-lib'
+app.use(VueCameraLib)
+
+
 app.mount('#app');

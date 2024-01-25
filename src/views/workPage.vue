@@ -18,13 +18,20 @@
     <div class="py-1">
         <button type="button" class="btn btn-warning w-full" @click="actionButton('/gpsReport', '_self')">GPS보고</button>
     </div>
-    <!-- <div class="py-1">
-        <button type="button" class="btn btn-warning w-full" @click="actionButton('/', '_self')">전자서명</button>
+    <div class="py-1">
+        <button type="button" class="btn btn-secondary w-full" @click="actionButton('/signSample', '_self')">전자서명</button>
     </div>
     <div class="py-1">
-        <button type="button" class="btn btn-warning w-full" @click="actionButton('/', '_self')">카메라촬영</button>
-    </div> -->
+        <button type="button" class="btn btn-info w-full" @click="actionButton('/cameraSample', '_self')">카메라촬영</button>
+    </div>
     <br/><br/>
+    
+    <div class="py-1">
+        <button type="button" class="btn btn-dark w-full" @click="actionButton('https://62fe53df410812000989322e--statuesque-madeleine-efb457.netlify.app/', '_blank')">(팝업) 카메라 참고사이트</button>
+    </div>
+    <div class="py-1">
+        <button type="button" class="btn btn-dark w-full" @click="actionButton('https://github.com/szimek/signature_pad', '_blank')">(팝업) 서명 참고사이트</button>
+    </div>
     <div class="py-1">
         <button type="button" class="btn btn-dark w-full" @click="actionButton('https://mirari.github.io/vue3-viewer', '_blank')">(팝업) 이미지뷰어 참고사이트</button>
     </div>

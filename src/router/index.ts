@@ -21,6 +21,8 @@ const routes: RouteRecordRaw[] = [
     { path: '/workPage', name: 'workPage', component: () => import('../views/workPage.vue') },
     { path: '/imageView', name: 'imageView', component: () => import('../views/imageView.vue') },
     { path: '/gpsReport', name: 'gpsReport', component: () => import('../views/gpsReport.vue') },
+    { path: '/signSample', name: 'signSample', component: () => import('../views/signSample.vue') },
+    { path: '/cameraSample', name: 'cameraSample', component: () => import('../views/cameraSample.vue') },
 ];
 
 const router = createRouter({

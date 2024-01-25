@@ -42,7 +42,7 @@
 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(getPositionValue, geolocationError)
-    }
+    } 
   }
   const getPositionValue = (val) => {
     curPositionObj.value.latitude = val.coords.latitude
