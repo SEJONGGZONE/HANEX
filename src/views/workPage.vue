@@ -10,13 +10,16 @@
         </ul>
     </div>
     <div class="py-1">
-        <button type="button" class="btn py-3 font-normal text-lg btn-primary w-full" @click="actionButton('/editList', '_self')">배송순서 편집</button>
+        <button type="button" class="btn py-3 font-normal text-lg btn-primary w-full" @click="actionButton('/editList', '_self')">리스트-편집</button>
     </div>
+    <!-- 재확인 요망(스와이프기능)<div class="py-1">
+        <button type="button" class="btn py-3 font-normal text-lg btn-warning w-full" @click="actionButton('/editList2', '_self')">리스트-편집2</button>
+    </div> -->
     <div class="py-1">
         <button type="button" class="btn py-3 font-normal text-lg btn-success w-full" @click="actionButton('/imageView', '_self')">이미지조회</button>
     </div>
     <div class="py-1">
-        <button type="button" class="btn py-3 font-normal text-lg btn-warning w-full" @click="actionButton('/gpsReport', '_self')">GPS보고</button>
+        <button type="button" class="btn py-3 font-normal text-lg btn-info w-full" @click="actionButton('/gpsReport', '_self')">GPS보고</button>
     </div>
     <div class="py-1">
         <button type="button" class="btn py-3 font-normal text-lg btn-secondary w-full" @click="actionButton('/signSample', '_self')">전자서명</button>

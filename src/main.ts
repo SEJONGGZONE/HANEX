@@ -13,6 +13,7 @@ app.use(router);
 
 // main app css
 import '@/assets/css/app.css';
+import 'vue-swipe-actions/dist/vue-swipe-actions.css';
 
 // perfect scrollbar
 import PerfectScrollbar from 'vue3-perfect-scrollbar';
