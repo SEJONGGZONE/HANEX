@@ -100,8 +100,8 @@
             //return WebViewBridge.showMessage(message);
         } else if (userAgent.indexOf('iphone') !== -1 || userAgent.indexOf('ipad') !== -1) {
             userType = "아이폰";
-            window.webkit.HybridApp.fromMobileMessage(userType);
-            //return window.webkit.messageHandlers.webViewMessageHandler.postMessage(message);
+            //window.webkit.HybridApp.fromMobileMessage(userType);
+            window.webkit.messageHandlers.fromMobileMessage.postMessage(userType);
         } else { // 안드로이드, IOS 가 아닌 경우 (더 조건을 추가해서 처리해도 됨)
             userType = "";
             //return window.opener.postMEssage(message);
