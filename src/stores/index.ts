@@ -140,6 +140,6 @@ declare global {
     interface Window {
         HybridApp: any;
         webkit: any;
-        
+        messageHandlers: any;
     }
   }
