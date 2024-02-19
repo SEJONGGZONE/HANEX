@@ -88,6 +88,21 @@
     
     const actionButton = (inputUrl : string, popType:string) => {
         // console.log('inputVal = ' + inputVal);
+        
+        const userAgent = navigator.userAgent.toLowerCase();
+        let userType;
+        if (userAgent.indexOf('android') !== -1) {
+            userType = "안드로이드";
+            //return WebViewBridge.showMessage(message);
+        } else if (userAgent.indexOf('iphone') !== -1 || userAgent.indexOf('ipad') !== -1) {
+            userType = "아이폰";
+            //return window.webkit.messageHandlers.webViewMessageHandler.postMessage(message);
+        } else { // 안드로이드, IOS 가 아닌 경우 (더 조건을 추가해서 처리해도 됨)
+            userType = "둘다아님";
+            //return window.opener.postMEssage(message);
+        }
+
+        window.HybridApp.fromMobileMessage(userType);
         window.open(inputUrl, popType);
     };
 </script>

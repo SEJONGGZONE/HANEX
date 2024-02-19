@@ -135,3 +135,9 @@ export const useAppStore = defineStore('app', {
     },
     getters: {},
 });
+
+declare global {
+    interface Window {
+        HybridApp: any;
+    }
+  }

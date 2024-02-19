@@ -85,7 +85,7 @@
                             >
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                             </svg>
-                            <span>'Notice - 알림/공지</span>
+                            <span>Notice - 알림/공지</span>
                         </h2>
                         <li class="nav-item">
                             <ul>

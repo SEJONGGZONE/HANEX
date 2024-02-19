@@ -22,6 +22,12 @@
         <button type="button" class="btn py-3 font-normal text-lg btn-info w-full" @click="actionButton('/gpsReport', '_self')">GPS보고</button>
     </div>
     <div class="py-1">
+        <button type="button" class="btn py-3 font-normal text-lg btn-warning w-full" @click="NativeAction('GPS_ON', '_self')">GPS-ON(App)</button>
+    </div>
+    <div class="py-1">
+        <button type="button" class="btn py-3 font-normal text-lg btn-warning w-full" @click="NativeAction('GPS_OFF', '_self')">GPS-OFF(App)</button>
+    </div>
+    <div class="py-1">
         <button type="button" class="btn py-3 font-normal text-lg btn-secondary w-full" @click="actionButton('/signSample', '_self')">전자서명</button>
     </div>
     <div class="py-1">
@@ -54,6 +60,11 @@
     const actionButton = (inputUrl : string, popType:string) => {
         // console.log('inputVal = ' + inputVal);
         window.open(inputUrl, popType);
+    };
+
+    const NativeAction = (actinoMsg : string) => {
+        let jsonString = '{"WORK_ID":"' + actinoMsg + '"}'
+        window.HybridApp.fromMobileMessage(jsonString);
     };
 
 </script>
