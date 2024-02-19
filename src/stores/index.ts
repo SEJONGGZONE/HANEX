@@ -139,5 +139,6 @@ export const useAppStore = defineStore('app', {
 declare global {
     interface Window {
         HybridApp: any;
+        webkit: any;
     }
   }

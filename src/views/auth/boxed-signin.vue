@@ -112,16 +112,17 @@
             showMessage(userType+'으로 확인되었습니다.','bottom');
             setTimeout(() => {
                 window.open(inputUrl, popType);
-            }, 1500);
+            }, 3000);
         }
         
         //
     };
     
   const showMessage = (msg = 'Example notification text.', position = 'bottom-start', showCloseButton = true, closeButtonHtml = '', duration = 3000) => {
-      const toast = Swal.mixin({
+    
+    const toast = Swal.mixin({
           toast: true,
-          position: position || 'bottom-start',
+          position: <any>(position || 'bottom-start'),
           showConfirmButton: false,
           timer: duration,
           showCloseButton: showCloseButton,
