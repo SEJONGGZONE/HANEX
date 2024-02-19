@@ -109,7 +109,7 @@
         if (userType == "") {
             window.open(inputUrl, popType);
         } else {
-            showMessage(userType+'으로 확인되었습니다.','bottom');
+            showMessage(userType+'(으)로 확인되었습니다.','bottom');
             setTimeout(() => {
                 window.open(inputUrl, popType);
             }, 3000);
