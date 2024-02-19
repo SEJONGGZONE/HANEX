@@ -119,6 +119,7 @@
     };
     
   const showMessage = (msg = 'Example notification text.', position = 'bottom-start', showCloseButton = true, closeButtonHtml = '', duration = 3000) => {
+    
     const toast = Swal.mixin({
           toast: true,
           position: <any>(position || 'bottom-start'),
