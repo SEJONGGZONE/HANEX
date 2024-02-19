@@ -31,6 +31,9 @@
         <button type="button" class="btn py-3 font-normal text-lg btn-secondary w-full" @click="actionButton('/signSample', '_self')">전자서명</button>
     </div>
     <div class="py-1">
+        <button type="button" class="btn py-3 font-normal text-lg btn-secondary w-full" @click="actionButton('https://www.ubireport.com/eform/ubieform/index.jsp', '_blank')">전자서명-Ubireport eForm</button>
+    </div>
+    <div class="py-1">
         <button type="button" class="btn py-3 font-normal text-lg btn-info w-full" @click="actionButton('/cameraSample', '_self')">카메라촬영</button>
     </div>
     <br/><br/>
@@ -72,5 +75,14 @@
 <style scoped>
 div {
     margin-top: 1rem;
+}
+
+.SAMPLE {
+    color: #ff4d46;
+    color: #4350bd;
+    color: #97c25b;
+    color: rgb(255, 77, 70);
+    color: rgb(67, 80, 189);
+    color: rgb(204,204,204);
 }
 </style>

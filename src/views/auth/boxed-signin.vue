@@ -72,6 +72,7 @@
     import appSetting from '@/app-setting';
     import { useAppStore } from '@/stores/index';
     import { useRouter } from 'vue-router';
+    import Swal from 'sweetalert2';
     import { useMeta } from '@/composables/use-meta';
 
     // import IconCaretDown from '@/components/icon/icon-caret-down.vue';
@@ -91,18 +92,43 @@
         
         const userAgent = navigator.userAgent.toLowerCase();
         let userType;
+        console.log(userAgent);
+
         if (userAgent.indexOf('android') !== -1) {
             userType = "안드로이드";
+            window.HybridApp.fromMobileMessage(userType);
             //return WebViewBridge.showMessage(message);
         } else if (userAgent.indexOf('iphone') !== -1 || userAgent.indexOf('ipad') !== -1) {
             userType = "아이폰";
+            window.webkit.HybridApp.fromMobileMessage(userType);
             //return window.webkit.messageHandlers.webViewMessageHandler.postMessage(message);
         } else { // 안드로이드, IOS 가 아닌 경우 (더 조건을 추가해서 처리해도 됨)
-            userType = "둘다아님";
+            userType = "";
             //return window.opener.postMEssage(message);
         }
-
-        window.HybridApp.fromMobileMessage(userType);
-        window.open(inputUrl, popType);
+        if (userType == "") {
+            window.open(inputUrl, popType);
+        } else {
+            showMessage(userType+'으로 확인되었습니다.','bottom');
+            setTimeout(() => {
+                window.open(inputUrl, popType);
+            }, 1500);
+        }
+        
+        //
     };
+    
+  const showMessage = (msg = 'Example notification text.', position = 'bottom-start', showCloseButton = true, closeButtonHtml = '', duration = 3000) => {
+      const toast = Swal.mixin({
+          toast: true,
+          position: position || 'bottom-start',
+          showConfirmButton: false,
+          timer: duration,
+          showCloseButton: showCloseButton,
+      });
+      toast.fire({
+          title: msg,
+      });
+  };
+
 </script>
